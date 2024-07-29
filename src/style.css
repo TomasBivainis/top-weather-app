@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#loading {
+  background-color: black;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.main {
+  padding: 20px;
+}

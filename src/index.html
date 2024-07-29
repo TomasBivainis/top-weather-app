@@ -6,11 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="query">
-      <label>Location:</label>
-      <input type="text" id="location" />
-      <button id="submit">Submit</button>
+    <div id="loading" hidden>
+      <h1>Loading...</h1>
     </div>
-    <div class="results"></div>
+
+    <div class="main">
+      <div class="query">
+        <label>Location:</label>
+        <input type="text" id="location" />
+        <button id="submit">Submit</button>
+      </div>
+      <div class="results"></div>
+    </div>
   </body>
 </html>

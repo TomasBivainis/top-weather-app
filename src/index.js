@@ -4,6 +4,9 @@ const weather_api_key = "QDW43YS2A2R6WLZYSGL3HQUUU";
 const gipht_api_key = "8r8kxe3wcVkQ3gZGBHbBZblOKyZ5qsIH";
 
 document.querySelector("#submit").addEventListener("click", async () => {
+  const divLoading = document.querySelector("#loading");
+  divLoading.hidden = false;
+
   const location = document.querySelector("#location").value;
 
   let data = await fetch(
@@ -35,6 +38,8 @@ document.querySelector("#submit").addEventListener("click", async () => {
   h2Description.classList.add("description");
   h2Description.innerHTML = data.description;
   divResults.appendChild(h2Description);
+
+  divLoading.hidden = true;
 
   if (response.data.length === 0) {
     throw new Error(`0 gifs found.`);
